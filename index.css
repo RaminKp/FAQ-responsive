@@ -1,0 +1,247 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(19, 1fr);
+  grid-template-rows: repeat(19, 1fr);
+  position: absolute;
+}
+
+.mainBox {
+  height: 100%;
+  width: 100%;
+  grid-row: 4/17;
+  grid-column: 4/17;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 10px 10px 25px rgba(105, 105, 105, 0.5);
+  position: absolute;
+  overflow: hidden;
+}
+
+.squareLines-img {
+  position: absolute;
+  top: -320px;
+  left: -600px;
+  width: 1000px;
+  height: 1000px;
+}
+
+.woman-img {
+  position: absolute;
+  top: 70px;
+  left: -70px;
+}
+
+.box-img {
+  position: absolute;
+  grid-row: 9/12;
+  grid-column: 3/5;
+  left: -18px;
+  top: 10px;
+}
+
+.faqPartDesktop {
+  position: relative;
+  grid-row: 5/16;
+  grid-column: 10/16;
+  height: auto;
+  overflow: auto;
+  padding-right: 30px;
+}
+
+/* Styling for WebKit-based browsers (Chrome, Safari) */
+.faqPartDesktop::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+.faqPartDesktop::-webkit-scrollbar-thumb {
+  background-color: #555; /* Set the color of the scrollbar thumb */
+  border-radius: 10px; /* Set the border radius of the scrollbar thumb */
+}
+
+.faqPartDesktop::-webkit-scrollbar-thumb:hover {
+  background-color: #888; /* Set the color of the scrollbar thumb on hover */
+}
+
+
+.faqPartDesktop {
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+  scrollbar-color: rgb(131, 131, 131) transparent; /* Set the color of the scrollbar thumb and track */
+}
+
+.arrowGridControl{
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(10,1fr);
+  top: 20px;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  scrollbar-color: black;
+}
+
+
+.faqTitle {
+  margin-bottom: 2px;
+  display: flex;
+  /* justify-content: center; */
+  font-family: 'Outfit', sans-serif;
+  font-size: 45px;
+}
+
+.question {
+  font-size: 15px;
+  color: #787887;
+  font-family: 'Outfit', sans-serif;
+  grid-column: 1/7;
+  padding-bottom: 18px;
+}
+
+.question:hover {
+  color: #f47c57;
+}
+
+.answer {
+  color: #949499;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  display: none;
+  margin-bottom: 8px !important;
+}
+
+hr {
+  background-color: lightgray;
+  height: 1px;
+  border: none;
+  margin-top: 8px !important;
+}
+
+.arrow {
+  grid-column: 10/11;
+  position: relative;
+  top: 6px;
+  right: -20px;
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+
+@media (max-width: 1350px) and (min-width: 500px) {
+  .mainBox {
+    height: 100%;
+    width: 100%;
+    grid-row: 5/18;
+    grid-column: 2/19;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 10px 10px 25px rgba(105, 105, 105, 0.5);
+    position: absolute;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .faqPartDesktop {
+    position: relative;
+    grid-row: 8/17;
+    grid-column: 4/17;
+    height: auto;
+    overflow: auto;
+    padding-right: 30px;
+  }
+  .squareLines-img {
+    position: relative;
+    top: -265px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; /* This will center the squareLines-img element within the mainBox */
+    width: 300px;
+    height: 300px;
+  }
+  .woman-img {
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the woman-img element within the mainBox */
+    width: 300px;
+  }
+  .box-img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-135%, -205%); /* Center the box-img element within the mainBox */
+    width: 125px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mainBox {
+    height: 100%;
+    width: 100%;
+    grid-row: 5/19;
+    grid-column: 2/19;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 10px 10px 25px rgba(105, 105, 105, 0.5);
+    position: absolute;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .faqPartDesktop {
+    position: relative;
+    grid-row: 8/17;
+    grid-column: 4/17;
+    height: auto;
+    overflow: auto;
+    padding-right: 30px;
+  }
+  .squareLines-img {
+    position: relative;
+    top: -265px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; /* This will center the squareLines-img element within the mainBox */
+    width: 200px;
+    height: 200px;
+  }
+  .woman-img {
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the woman-img element within the mainBox */
+    width: 200px;
+  }
+  .box-img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-130%, -280%); /* Center the box-img element within the mainBox */
+    width: 90px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
